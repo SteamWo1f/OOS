@@ -95,8 +95,9 @@
       text-align: center;
     }
 
+
     .collapsible-section {
-      background: linear-gradient(to top, #751e26, #2b1262);
+      background: linear-gradient(to bottom, #751e26, #2b1262);
       padding: 40px;
       margin: 20px;
       border-radius: 8px;
@@ -109,7 +110,7 @@
       color: #fff;
       cursor: pointer;
       padding: 18px;
-      width: 40%;
+      width: auto;
       text-align: center;
       border: none;
       outline: none;
@@ -119,9 +120,6 @@
       font-size: 24px;
       font-weight: bold; /* Add font-weight: bold; to make the button text bold */
     }
-
-
-    
 
     .collapsible-section .collapsible:active,
     .badge:active {
@@ -151,7 +149,6 @@
       background-color: transparent; /* Make the button transparent */
       text-align: left; /* Align the content text */
       color: #000;
-      
     }
 
     .collapsible-section .collapsed-content {
@@ -247,6 +244,154 @@
       padding: 10px;
     }
 
+
+
+
+    .collapsible-section2 {
+      background: linear-gradient(to top, #751e26, #2b1262);
+      padding: 40px;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center; /* Center the text */
+    }
+    
+    .collapsible-section2 .collapsible2 {
+      background-color: transparent; /* Make the button transparent */
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: auto;
+      text-align: center;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s;
+      border-radius: 15px; /* Make the button rounded */
+      border: 2px solid #fff; /* Add a border */
+      font-size: 24px;
+      font-weight: bold; /* Add font-weight: bold; to make the button text bold */
+    }
+
+
+    
+
+    .collapsible-section2 .collapsible2:active,
+    .badge:active {
+      transform: scale(0.9); /* Adjust the scale value as needed */
+      transition: transform 0.05s;
+    }
+    
+    
+    .collapsible-section2 .collapsible2:hover {
+      background-color: rgba(255, 255, 255, 0.2); /* Add a hover background color */
+    }
+  
+    
+    .collapsible-section2 .collapsible2:after {
+      color: #fff;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    
+    
+    .collapsible-section2 .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: transparent; /* Make the button transparent */
+      text-align: left; /* Align the content text */
+      color: #000;
+      
+    }
+
+    .collapsible-section2 .collapsed-content2 {
+      padding-top: 20px;
+    }
+  
+    .collapsible-section2 .collapsed-content2 p {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .collapsible-section2 .collapsed-content2 a {
+      color: #6aabff;
+      text-decoration: none;
+      transition: color 0.3s;
+      width: auto;
+    }
+  
+    .collapsible-section2 .collapsed-content2 a:hover {
+      color: #9269dd;
+    }
+
+    .collapsible-section2 .collapsed-content2 p {
+      margin: 10px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      
+
+    }
+    
+    .collapsible-section2 .collapsed-content2 p:nth-child(even)::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+      border-radius: 5px; /* Make the button rounded */    }
+    
+    .collapsible-section2 .collapsed-content2 p:nth-child(even)::after {
+      height: 28px; /* Adjust the value as needed for your design */
+    }
+
+    .ss-image {
+      max-width: 80%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .collapsed-content2 p {
+      max-width: 80%;
+    }
+
+    .collapsed-section2 {
+      margin: 0 auto; /* Centers the image horizontally */
+
+    }
+
+    .collapsed-content2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .centered-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%; /* Ensure the content takes up the full height */
+    }
+
+    .centered-content2 {
+      width: 80%;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
   </style>
 </head>
 
@@ -280,8 +425,30 @@
     <p>Moreover, Optimized Oasis enriches the world generation process, resulting in breathtaking landscapes and captivating structures. From vibrant biomes to unique and awe-inspiring landmarks, every world offers a distinct and memorable experience.</p>
     <p>Embark on a refined Minecraft journey with Optimized Oasis, where your adventure is optimized for maximum enjoyment. Explore, build, and survive in a world where the enhancements seamlessly integrate with the existing gameplay, providing a truly immersive and rewarding experience.</p>
     </div>
-  </div>
 
+  </div>
+  <div class="collapsible-section2">
+    <button class="collapsible2">Screenshots</button>
+    <div class="collapsed-content2" style="display: none;">
+      <ul class="centered-content">
+        <a><img class="ss-image" src="https://github.com/SteamWo1f/Optimized-Oasis/blob/main/Images/Screenshots/bright-valley.png?raw=true"></a>
+        <p class="centered-content2">Bright Valley</p>
+        <a><img class="ss-image" src="https://github.com/SteamWo1f/Optimized-Oasis/blob/main/Images/Screenshots/cliff-line.png?raw=true"></a>
+        <p class="centered-content2">Cliff Line</p>
+        <a><img class="ss-image" src="https://github.com/SteamWo1f/Optimized-Oasis/blob/main/Images/Screenshots/island-in-the-clouds.png?raw=true"></a>
+        <p class="centered-content2">Island In The Clouds</p>
+        <a><img class="ss-image" src="https://github.com/SteamWo1f/Optimized-Oasis/blob/main/Images/Screenshots/lone-island.png?raw=true"></a>
+        <p class="centered-content2">Lone Island</p>
+        <a><img class="ss-image" src="https://github.com/SteamWo1f/Optimized-Oasis/blob/main/Images/Screenshots/peaks.png?raw=true"></a>
+        <p class="centered-content2">Peaks</p>
+        <a><img class="ss-image" src="https://github.com/SteamWo1f/Optimized-Oasis/blob/main/Images/Screenshots/tall-towers.png?raw=true"></a>
+        <p class="centered-content2">Tall Towers</p>
+        <!-- Add more screenshots as needed -->
+      </ul>
+    </div>
+  </div>
+  
+  
   <div class="collapsible-section">
     <button class="collapsible">Mod List</button>
     <div class="collapsed-content" style="display: none;">
@@ -317,6 +484,11 @@
   </footer>
 
   <script>
+
+
+
+
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -331,7 +503,32 @@
         }
       });
     }
-  </script>
+
+    var coll = document.getElementsByClassName("collapsible2");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+
+   var screenshotButton = document.querySelector(".collapsible2");
+   var collapsedContent = document.querySelector(".collapsed-content");
+
+   screenshotButton.addEventListener("click", function () {
+     this.classList.toggle("active");
+     collapsedContent.classList.toggle("centered-content");
+   });
+</script>
+
 
 </body>
 
