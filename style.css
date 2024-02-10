@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    font-family: 'Lexend Deca', serif;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 45%;
+    height: auto;
+}
+
+body {
+    background-color: #1b1b1b;
+}
+
+header {
+    color: white;
+    padding:  20px;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+
+.header-buttons-1:hover, .header-buttons-2:hover, .header-buttons-3:hover {
+    transform: scale(1.1);
+    transition: transform  0.3s ease;
+}
+
+.header-buttons-1::after, .header-buttons-2::after, .header-buttons-3::after {
+    transform: scale(0.9);
+    transition: transform  0.3s ease;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.header-buttons-1 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-buttons-2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+.header-buttons-3 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li button.nav-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: large;
+    
+}
+
+nav li button.nav-btn a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:  10px 20px;
+    text-decoration: none;
+    margin: 6px;
+}
+
+nav li button.nav-btn a:hover {
+    background-color: #111;
+    border-radius:  10px;
+}
+
+.trailer-embed{
+    margin-top: 40px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+}
+
+.about {
+    max-width: 1150px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 2rem; /* Add some space around the content */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+}
+
+.about h2 {
+    font-size: 2.0rem; /* Larger heading size */
+    color: #ccc; /* Darker heading color */
+    margin-bottom: 1rem; /* Space below the heading */
+    text-align: center; /* Center the heading */
+}
+
+.about p {
+    font-size: 1.0rem; /* Slightly larger paragraph size */
+    line-height: 1.5; /* Comfortable reading line height */
+    color: #999; /* Soft paragraph color */
+    margin-bottom: 1rem; /* Space between paragraphs */
+    text-align: center; /* Justify the text for better readability */
+}
+
+.quilt_loader{
+    margin-top: 40px;
+    width: 15%;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,  1fr);
+    gap:  10px; /* Adjust the gap between grid items as needed */
+    text-align: center;
+    color: #999;
+}

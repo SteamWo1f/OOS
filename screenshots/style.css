@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    font-family: 'Lexend Deca', serif;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 45%;
+    height: auto;
+}
+
+body {
+    background-color: #1b1b1b;
+}
+
+header {
+    color: white;
+    padding:  20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li button.nav-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: large;
+    
+}
+
+nav li button.nav-btn a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:  10px 20px;
+    text-decoration: none;
+    margin: 6px;
+}
+
+nav li button.nav-btn a:hover {
+    background-color: #111;
+    border-radius:  10px;
+}
+
+.carousel-image {
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.screenshots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screenshots table {
+    width:  100%;
+    border-collapse: collapse;
+    margin:  0 auto;
+}
+
+.screenshots td {
+    width:  16.66%;
+    vertical-align: top;
+    padding:  10px;
+    text-align: center;
+}
+
+.screenshots img {
+    max-width:  100%;
+    height: auto;
+    display: block;
+    margin:  0 auto;
+    border-radius: 10px;
+
+}
+
+.screenshots p {
+    margin-top:  10px;
+    font-size:  1.0em;
+    color: #fff;
+    text-align: center;
+}
+
+.screenshot-text{
+    margin-top: 40px;
+    text-align: center;
+    color: #999
+}
