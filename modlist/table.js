@@ -2,7 +2,12 @@
 async function fetchCSVData(url) {
     const response = await fetch(url);
     const csvText = await response.text();
-    return csvText.split('\n').filter(Boolean).map(row => row.split(','));
+    let data = csvText.split('\n').filter(Boolean).map(row => row.split(','));
+
+    // Sort the data array by the second column (names) alphabetically
+    data.sort((a, b) => a[1].localeCompare(b[1]));
+
+    return data;
 }
 
 function createTableFromCSV(data) {
