@@ -11,11 +11,12 @@
 }
 
 body {
-    background-color: #1b1b1b;
+    background-color: #290D5C;
+    background-image: linear-gradient(#290D5C, #030026);
 }
 
 header {
-    color: white;
+    color: #F1E9FF;
     padding:  20px;
     text-align: center;
 }
@@ -26,12 +27,29 @@ nav ul {
     margin: 10px;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     border-radius: 50px;
+    position: relative;
 }
 
+nav ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+nav li button.nav-btn a:hover {
+    background-color: #120629b9;
+    border-radius:  10px;
+}
 
 .header-buttons-1:hover, .header-buttons-2:hover, .header-buttons-3:hover {
     transform: scale(1.1);
@@ -56,7 +74,6 @@ nav ul {
 .header-buttons-2 {
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 30px;
 }
 
 .header-buttons-3 {
@@ -86,56 +103,101 @@ nav li button.nav-btn a {
     margin: 6px;
 }
 
-nav li button.nav-btn a:hover {
-    background-color: #111;
-    border-radius:  10px;
+@media (max-width: 400px) {
+
+    .logo {
+        margin-top: 40px;
+        width: 90%;
+        height: auto;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .trailer-embed{
+        margin-top: 40px;
+        border-radius: 10px;
+        text-align: center;
+        width: auto;
+        height: 50%;
+    }
 }
 
 .trailer-embed{
     margin-top: 40px;
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center the text */
+    border-radius: 10px;
+    text-align: center;
 }
 
 .about {
-    max-width: 1150px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the content horizontally */
-    padding: 2rem; /* Add some space around the content */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center the text */
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .about h2 {
-    font-size: 2.0rem; /* Larger heading size */
-    color: #ccc; /* Darker heading color */
-    margin-bottom: 1rem; /* Space below the heading */
-    text-align: center; /* Center the heading */
+    font-size: 2.0rem;
+    color: #E7D9FF;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .about p {
-    font-size: 1.0rem; /* Slightly larger paragraph size */
-    line-height: 1.5; /* Comfortable reading line height */
-    color: #999; /* Soft paragraph color */
-    margin-bottom: 1rem; /* Space between paragraphs */
-    text-align: center; /* Justify the text for better readability */
-}
-
-.quilt_loader{
-    margin-top: 40px;
-    width: 15%;
-    height: auto;
+    font-size: 1.0rem;
+    line-height: 1.5;
+    color: #F1E9FF;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-b1 {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    text-align: right;
+}
+
+.footer-b2 {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    text-align: left;
+}
+
+.footer-help {
+    text-align: center;
+    color: #E6DEF4;
+}
+
+.footer-help a {
+    color: #b66bb5;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-text a {
+    color: #b66bb5;
+    text-decoration: none;
+    display: inline;
+    padding: 10px 0;
 }
 
 .footer-text {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(1,  1fr);
-    gap:  10px; /* Adjust the gap between grid items as needed */
-    text-align: center;
-    color: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #E6DEF4;
 }

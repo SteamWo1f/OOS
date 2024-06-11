@@ -11,11 +11,17 @@ async function fetchCSVData(url) {
 }
 
 function createTableFromCSV(data) {
-    const table = document.createElement('table');
-    table.className = 'mod-table';
-    const tbody = document.createElement('tbody');
+    const tables = [document.createElement('table'), document.createElement('table'), document.createElement('table')];
+    tables.forEach(table => {
+        table.className = 'mod-table';
+        const tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+    });
 
     data.forEach((row, i) => {
+        const tableIndex = i % 3; // This line ensures distribution across 3 tables
+        const tbody = tables[tableIndex].querySelector('tbody');
+
         const tr = document.createElement('tr');
         const tdIcon = document.createElement('td');
         tdIcon.className = 'icon-cell';
@@ -26,24 +32,26 @@ function createTableFromCSV(data) {
         tr.appendChild(tdIcon);
 
         const tdName = document.createElement('td');
-        const btn = document.createElement('button'); // Create a button element
-        btn.className = 'mod-link-btn'; // Add a class to style the button
-        btn.innerHTML = `<a href="${row[2]}" target="_blank" rel="noopener noreferrer">${row[1]}</a>`; // Wrap the anchor tag within the button
-        tdName.appendChild(btn); // Append the button to the td element
+        const btn = document.createElement('button');
+        btn.className = 'mod-link-btn';
+        btn.innerHTML = `<a href="${row[2]}" target="_blank" rel="noopener noreferrer">${row[1]}</a>`;
+        tdName.appendChild(btn);
         tr.appendChild(tdName);
 
         tbody.appendChild(tr);
     });
 
-    table.appendChild(tbody);
-    return table;
+    return tables;
 }
 
 async function init() {
     const csvUrl = 'modlist.csv';
     const csvData = await fetchCSVData(csvUrl);
-    const table = createTableFromCSV(csvData);
-    document.getElementById('csvTableContainer').appendChild(table);
+    const tables = createTableFromCSV(csvData); // This now returns an array of tables
+    const container = document.getElementById('csvTableContainer');
+    tables.forEach(table => {
+        container.appendChild(table); // Append each table to the container
+    });
 }
 
 document.addEventListener('DOMContentLoaded', init);
