@@ -100,3 +100,47 @@ nav li button.nav-btn a:hover {
     text-align: center;
     color: #999
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-b1 {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    text-align: right;
+}
+
+.footer-b2 {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    text-align: left;
+}
+
+.footer-help {
+    text-align: center;
+    color: #E6DEF4;
+}
+
+.footer-help a {
+    color: #b66bb5;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-text a {
+    color: #b66bb5;
+    text-decoration: none;
+    display: inline;
+    padding: 10px 0;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #E6DEF4;
+}
