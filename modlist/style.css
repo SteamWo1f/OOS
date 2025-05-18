@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
+:root {
+    color-scheme: dark;
+}
+
 * {
     font-family: 'Lexend Deca', serif;
 }
 
 body {
     background-color: #290D5C;
-    background-image: linear-gradient(#290D5C, #030026);
+    background: linear-gradient(#290D5C, #030026);
 }
 
 .main-table {
